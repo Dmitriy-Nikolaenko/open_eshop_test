@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/" />
+<title>creation_coupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">creation_coupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/open-eshop-2.0.1/oc-panel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>min_discount</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>25</td>
+	<td>max_discount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random() * (${max_discount} - ${min_discount})) + ${min_discount}</td>
+	<td>discount</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>totemic deity Hurn</td>
+	<td>coupon_name</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>12</td>
+	<td>coupons_number</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//h4[@class='panel-title']//span[contains(@class, 'glyphicon-th')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[@class='panel-title']//span[contains(@class, 'glyphicon-th')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@class='br']//i[contains(concat(' ', normalize-space(@class), ' '), ' glyphicon-tag ')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//td[@class='br']//i[contains(concat(' ', normalize-space(@class), ' '), ' glyphicon-tag ')]</td>
+	<td>10,10</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[contains(@class, 'btn-primary')]/i[contains(concat(' ', normalize-space(@class), ' '), ' glyphicon-pencil ')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(@class, 'btn-primary')]/i[contains(concat(' ', normalize-space(@class), ' '), ' glyphicon-pencil ')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@class='form-actions']/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${coupon_name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=discount_amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=discount_amount</td>
+	<td>${discount}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@name='valid_date']</td>
+	<td>1985-11-04</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=number_coupons</td>
+	<td>${coupons_number}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class='form-actions']/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@class='header-container']/a[contains(@class, 'navbar-brand')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
